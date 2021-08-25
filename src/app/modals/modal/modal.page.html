@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+			<ion-title>{{ movie.name  }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Fecha salida: {{ movie.airdate }}</ion-card-subtitle>
+      <ion-card-title>{{ movie.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+				<span>Tipo: {{ movie.type }}</span><br>
+      <span>Temporada: {{ movie.season }}</span>
+      <div [innerHTML]="movie.summary"></div>
+    </ion-card-content>
+    <ion-button expand="block" (click)="closeModal()">Cerrar Modal</ion-button>
+  </ion-card>
+</ion-content>
